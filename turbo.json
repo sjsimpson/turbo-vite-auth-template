@@ -1,0 +1,51 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [".env"],
+  "tasks": {
+    "build": {
+      "env": [
+        "NODE_ENV",
+        "APP_ORIGIN",
+        "SESSION_SECRET",
+        "TRPC_PREFIX",
+        "REDIS_HOST",
+        "REDIS_PORT",
+        "REDIS_PASSWORD",
+        "REDIS_SECRET",
+        "API_HOST",
+        "API_PORT",
+        "DATABASE_URL"
+      ],
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "lint": {},
+    "clean": {
+      "cache": false
+    },
+    "db:generate": {
+      "cache": false
+    },
+    "db:push": {
+      "cache": false
+    },
+    "dev": {
+      "dependsOn": ["@turbo-vite-auth-template/db#db:generate"],
+      "env": [
+        "NODE_ENV",
+        "APP_ORIGIN",
+        "SESSION_SECRET",
+        "TRPC_PREFIX",
+        "REDIS_HOST",
+        "REDIS_PORT",
+        "REDIS_PASSWORD",
+        "REDIS_SECRET",
+        "API_HOST",
+        "API_PORT",
+        "DATABASE_URL"
+      ],
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

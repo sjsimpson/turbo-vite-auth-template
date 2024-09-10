@@ -1,0 +1,4 @@
+{
+  "extends": "@turbo-vite-auth-template/typescript-config/vite.json",
+  "include": ["src", "vite-env.d.ts"]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@turbo-vite-auth-template/api",
+  "version": "1.0.0",
+  "description": "API for Your App",
+  "license": "ISC",
+  "exports": {
+    "./router": "./src/router.ts"
+  },
+  "scripts": {
+    "with-env": "dotenv -e ../../.env",
+    "clean": "rm -rf node_modules/",
+    "build": "pnpm with-env -- tsc -p tsconfig.json --outDir ./dist",
+    "dev": "pnpm with-env -- tsx watch src/server.ts"
+  },
+  "dependencies": {
+    "@turbo-vite-auth-template/db": "workspace:*",
+    "@fastify/cookie": "^9.3.1",
+    "@fastify/cors": "^9.0.1",
+    "@fastify/session": "^10.7.0",
+    "@trpc/server": "11.0.0-next-beta.305",
+    "connect-redis": "^7.1.1",
+    "fastify": "^4.26.2",
+    "redis": "^4.6.13",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@turbo-vite-auth-template/typescript-config": "workspace:*",
+    "@types/cors": "^2.8.17",
+    "@types/node": "^20.11.24",
+    "dotenv-cli": "^7.4.2",
+    "fastify-cli": "^6.1.1",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
+  }
+}

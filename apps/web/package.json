@@ -1,0 +1,53 @@
+{
+  "name": "web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "clean": "rm -rf node_modules/",
+    "preview": "vite preview",
+    "lint": "eslint \"src/**/*.ts\""
+  },
+  "dependencies": {
+    "@turbo-vite-auth-template/api": "workspace:*",
+    "@turbo-vite-auth-template/ui": "workspace:*",
+    "@supabase/supabase-js": "^2.45.0",
+    "@tanstack/react-form": "^0.13.7",
+    "@tanstack/react-query": "^5.45.0",
+    "@tanstack/react-query-devtools": "^5.45.0",
+    "@tanstack/react-router": "^1.36.3",
+    "@tanstack/router-devtools": "^1.36.3",
+    "@tanstack/zod-form-adapter": "^0.13.7",
+    "@trpc/client": "11.0.0-next-beta.305",
+    "@trpc/next": "11.0.0-next-beta.305",
+    "@trpc/react-query": "11.0.0-next-beta.305",
+    "@trpc/server": "11.0.0-next-beta.305",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.3.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@turbo-vite-auth-template/eslint-config": "workspace:*",
+    "@turbo-vite-auth-template/tailwind": "workspace:*",
+    "@turbo-vite-auth-template/typescript-config": "workspace:*",
+    "@tanstack/router-vite-plugin": "^1.38.0",
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "tailwindcss": "^3.4.4",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.4.5",
+    "vite": "^5.3.1"
+  }
+}

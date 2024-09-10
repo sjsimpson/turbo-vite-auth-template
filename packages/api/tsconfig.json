@@ -1,0 +1,9 @@
+{
+  "extends": "@turbo-vite-auth-template/typescript-config/base.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "strict": true,
+    "allowImportingTsExtensions": true
+  },
+  "include": ["src"]
+}
